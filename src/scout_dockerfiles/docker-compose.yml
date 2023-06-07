@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+
+  scout:
+    user: root
+    image: scout:latest
+    build:
+      context: ..
+      dockerfile: ./scout_dockerfiles/Dockerfile
+    container_name: scout
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+      - "/tmp/.docker.xauth:/tmp/.docker.xauth"
+      - "../:/root/catkin_ws/src"
+    environment:
+      - "DISPLAY=$DISPLAY"
+      - "XAUTHORITY=/tmp/.docker.xauth"
+      - "QT_X11_NO_MITSHM=1"
+    privileged: True
+    network_mode: host
+    tty: True
+    stdin_open: True
+    command: bash
