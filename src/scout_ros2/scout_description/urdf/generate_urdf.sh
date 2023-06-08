@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ros2 run xacro xacro scout_v2.xacro > scout_v2.urdf
+ros2 run xacro xacro scout_wheel_type2.xacro > scout_wheel_type2.urdf

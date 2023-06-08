@@ -9,7 +9,10 @@ basic_dep="git \
            libasio-dev
 	      "
 
-ros_dep=""
+ros_dep="ros-humble-gazebo-ros \
+         ros-humble-nav2-bringup \
+         ros-humble-slam-toolbox \
+         ros-humble-xacro"
 
 python_dep="numpy"
 

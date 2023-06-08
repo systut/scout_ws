@@ -22,7 +22,5 @@ WORKDIR /root/catkin_ws
 
 RUN rosdep update
 
-# RUN rosdep install -i --from-path src --rosdistro $ROS_DISTRO -y
-
-# RUN source /opt/ros/humble/setup.bash && \
-#     colcon build
+RUN source /opt/ros/humble/setup.bash && \
+    colcon build
